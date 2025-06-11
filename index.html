@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Texas Hold'em Poker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <h1>Texas Hold'em Poker</h1>
+
+    <div id="players">
+      <!-- Player 1 -->
+      <div class="player" id="player-1">
+        <h3>Player 1</h3>
+        <div class="position-indicators">
+          <div class="dealer-button">D</div>
+          <div class="small-blind">SB</div>
+          <div class="big-blind">BB</div>
+        </div>
+        <div id="player-1-cards" class="player-cards"></div>
+        <div class="player-stats">
+          <div>Chips: $<span id="player-1-chips">100</span></div>
+          <div>Bet: $<span id="player-1-bet">0</span></div>
+        </div>
+        <div class="chip-display"></div>
+      </div>
+
+      <!-- Player 2 -->
+      <div class="player" id="player-2">
+        <h3>Player 2</h3>
+        <div class="position-indicators">
+          <div class="dealer-button">D</div>
+          <div class="small-blind">SB</div>
+          <div class="big-blind">BB</div>
+        </div>
+        <div id="player-2-cards" class="player-cards"></div>
+        <div class="player-stats">
+          <div>Chips: $<span id="player-2-chips">100</span></div>
+          <div>Bet: $<span id="player-2-bet">0</span></div>
+        </div>
+        <div class="chip-display"></div>
+      </div>
+
+      <!-- Player 3 -->
+      <div class="player" id="player-3">
+        <h3>Player 3</h3>
+        <div class="position-indicators">
+          <div class="dealer-button">D</div>
+          <div class="small-blind">SB</div>
+          <div class="big-blind">BB</div>
+        </div>
+        <div id="player-3-cards" class="player-cards"></div>
+        <div class="player-stats">
+          <div>Chips: $<span id="player-3-chips">100</span></div>
+          <div>Bet: $<span id="player-3-bet">0</span></div>
+        </div>
+        <div class="chip-display"></div>
+      </div>
+
+      <!-- Player 4 (User) -->
+      <div class="player" id="player-4">
+        <h3>You</h3>
+        <div class="position-indicators">
+          <div class="dealer-button">D</div>
+          <div class="small-blind">SB</div>
+          <div class="big-blind">BB</div>
+        </div>
+        <div id="player-4-cards" class="player-cards"></div>
+        <div class="player-stats">
+          <div>Chips: $<span id="player-4-chips">100</span></div>
+          <div>Bet: $<span id="player-4-bet">0</span></div>
+        </div>
+        <div class="chip-display"></div>
+      </div>
+    </div>
+
+    <!-- Community Cards -->
+    <div id="community-cards" class="card-row"></div>
+
+    <!-- Pot Display -->
+    <div id="pot-container">
+      <div id="pot-info">
+        <div id="pot-label">POT</div>
+        <div id="pot">0</div>
+      </div>
+      <div id="pot-chips"></div>
+    </div>
+
+    <!-- Player Action Information -->
+    <div id="info"></div>
+
+    <!-- Player Controls -->
+    <div id="controls">
+      <!-- Standard Action Buttons -->
+      <div class="action-buttons">
+        <button id="check-btn">Check</button>
+        <button id="call-btn">Call</button>
+        <button id="fold-btn">Fold</button>
+      </div>
+
+      <!-- Hidden Legacy Controls -->
+      <div class="hidden-controls" style="display: none;">
+        <input type="number" id="raise-input" placeholder="Raise" min="10" step="10">
+        <button id="raise-btn">Raise</button>
+        <button id="bet-btn">Bet $10</button>
+        <button id="next-round-btn">Next Round</button>
+        <button id="new-game-btn">New Game</button>
+      </div>
+
+      <!-- Betting Slider Control -->
+      <div id="slider-container" class="slider-container">
+        <div id="bet-value-display">Bet: $10</div>
+        <label for="bet-slider" class="visually-hidden">Bet Amount</label>
+        <input type="range" id="bet-slider" min="1" max="100" value="10" aria-label="Bet Amount">
+        <button id="confirm-bet-btn" class="action-button">Bet/Raise</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
